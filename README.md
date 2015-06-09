@@ -1,1 +1,3 @@
-# pomtitra
+# Pomtitra
+
+## A timer for pomodoro
