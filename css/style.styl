@@ -1,4 +1,6 @@
 $font-color = #0d1f43
+$second-hand = #d01c1c
+$minute-hand = #41523f
 
 html
     font-size 62.5%
@@ -24,6 +26,28 @@ h1
     
 #timer-container
     margin 0 auto
+    
+.analog-timer
+    position relative
+    width: 500px
+    height 500px
+    margin 0 auto
+
+.second-hand,
+.minute-hand
+    position absolute
+    left 50%
+    transform-origin 50% 100%
+    
+.second-hand
+    width 5px
+    height 100px
+    background-color $second-hand
+    
+.minute-hand
+    width 10px
+    height 100px
+    background-color $minute-hand
 
     
 @media screen and (min-width 390px)
@@ -32,5 +56,5 @@ h1
         font-size 11.1rem
     h1
         font-size 89px
-        font-size 8.
+        font-size 8.9rem
         text-align left

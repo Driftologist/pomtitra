@@ -18,6 +18,13 @@ app.controller( 'TimerCtrl', function( $scope, $interval ) {
                 $scope.secondsLeft = $scope.secondsLeft - 1;
                 if ($scope.secondsLeft === 60) $scope.secondsLeft = 0;
                 if ($scope.secondsLeft === -1) $scope.secondsLeft = 59;
+                
+                
+                $scope.secondsAngle = $scope.secondsLeft*6;
+                $scope.minutesAngle = $scope.minutesLeft*6;
+                $('.second-hand').css('transform', 'rotate(' + $scope.secondsAngle + 'deg)');
+                $('.minute-hand').css('transform', 'rotate(' + $scope.minutesAngle + 'deg)');
+                
             } else {
                 $scope.stopTimer();
             }
@@ -37,10 +44,11 @@ app.controller( 'TimerCtrl', function( $scope, $interval ) {
             $scope.minutesLeft = 25;
             $scope.secondsLeft = 0;
         }
-    }
+    };
     
     $scope.$on( '$destroy', function() {
         $scope.stopTimer();
     } );
-})
+    
+});
 
