@@ -16,16 +16,19 @@
     </head>
     <body ng-controller="TimerCtrl">
         
-        <h1 class="heading">Pomtitra</h1>
-        <input ng-model="format">
-        <span my-current-time="format"></span>
-        <div class="container">
-            <p>Time: 
+        <span my-current-time="format" class="pull-right"></span>
+        <div class="container" id="timer-container">
+            <h1 class="heading">Pomtitra</h1>
+            <p class="time-display">
                 <span data-time="25" id="time-minute">{{ minutesLeft }}</span>
                 :
                 <span id="time-second">{{ secondsLeft | numberFixedLen:2 }}</span>
             </p>
-            <button ng-click="countDown()" class="btn btn-default btn-lg">Start timer</button>
+            <div class="timer-buttons">
+                <button ng-click="startTimer()" class="btn btn-default btn-lg">Start timer</button>
+                <button ng-click="stopTimer()" class="btn btn-default btn-lg">Pause timer</button>
+                <button ng-click="resetTimer()" class="btn btn-default btn-lg">Reset timer</button>
+            </div>
         </div>
         
         
