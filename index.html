@@ -1,0 +1,24 @@
+<!DOCTYPE>
+<html ng-app="app">
+    <head>
+        <title>Pomtitra</title>
+    </head>
+    <body ng-controller="TimerCtrl">
+        
+        <h1>Pomtitra</h1>
+        <input ng-model="format">
+        <span my-current-time="format"></span>
+        <p>Time: 
+            <span data-time="25" id="time-minute">{{ minutesLeft }}</span>
+            :
+            <span id="time-second">{{ secondsLeft | numberFixedLen:2 }}</span>
+        </p>
+        <button ng-click="countDown()"></button>
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js">
+        </script>
+        <script src="ng/app.js">
+        </script>
+    </body>
+</html>
