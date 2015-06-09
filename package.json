@@ -1,0 +1,11 @@
+{
+  "name": "pomtitra",
+  "repository": "https://github.com/Driftologist/pomtitra",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-ng-annotate": "^1.0.0",
+    "gulp-stylus": "^2.0.3",
+    "gulp-uglify": "^1.2.0"
+  }
+}
