@@ -7,7 +7,7 @@ app.controller( 'TimerCtrl', function( $scope, $interval ) {
     
     var stop;
     
-    $scope.countDown = function() {
+    $scope.startTimer = function() {
         // Dont start a new timer if one is already running
         if ( angular.isDefined(stop) ) return;
         
@@ -30,6 +30,14 @@ app.controller( 'TimerCtrl', function( $scope, $interval ) {
             stop = undefined;
         }
     };
+    
+    $scope.resetTimer = function() {
+        if (angular.isDefined( stop ) ) {
+            $scope.stopTimer();
+            $scope.minutesLeft = 25;
+            $scope.secondsLeft = 0;
+        }
+    }
     
     $scope.$on( '$destroy', function() {
         $scope.stopTimer();
