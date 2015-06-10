@@ -20,13 +20,13 @@ app.controller( 'TimerCtrl', function( $scope, $interval ) {
                 if ($scope.secondsLeft === -1) $scope.secondsLeft = 59;
                 
                 
-                $scope.secondsAngle = $scope.secondsLeft*6;
+                $scope.secondsAngle = $scope.time*6;
                 $scope.minutesAngle = $scope.minutesLeft*6;
                 $('.second-hand').css('transform', 'rotate(' + $scope.secondsAngle + 'deg)');
                 $('.minute-hand').css('transform', 'rotate(' + $scope.minutesAngle + 'deg)');
                 
             } else {
-                $scope.stopTimer();
+                $scope.resetTimer();
             }
         }, 1000);
     };
