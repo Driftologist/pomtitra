@@ -19,6 +19,7 @@
         <span my-current-time="format" class="pull-right"></span>
         <div class="container" id="timer-container">
             <h1 class="heading">Pomtitra</h1>
+            <h2 ng-if="{{ pomsCompleted >= 0 }}">{{ pomsCompleted }}</h2>
             <p class="time-display">
                 <span data-time="25" id="time-minute">{{ minutesLeft }}</span>
                 :
